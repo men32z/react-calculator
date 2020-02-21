@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const App = () => (
-  <div>
-    React Calculator
-  </div>
-);
+import App from './components/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
