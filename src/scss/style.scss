@@ -1,0 +1,27 @@
+.calculator {
+  width: 700px;
+}
+.display {
+  background-color: #858694;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: right;
+}
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  & > div {
+    div {
+      color: black;
+      border: #BABABA 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    display: flex;
+    height: 100px;
+  }
+}

@@ -6,10 +6,10 @@ const ButtonPanel = () => {
   const group2 = ['7', '8', '9', 'X'].map(x => <Button key={x} name={x} />);
   const group3 = ['4', '5', '6', '-'].map(x => <Button key={x} name={x} />);
   const group4 = ['1', '2', '3', '+'].map(x => <Button key={x} name={x} />);
-  const group5 = ['0', '.', '='].map(x => <Button key={x} name={x} />);
+  const group5 = ['0', '.', '='].map((x, i) => <Button key={x} name={x} wide={i===0}/>);
 
   return (
-    <div>
+    <div className="button-panel">
       <div>{group1}</div>
       <div>{group2}</div>
       <div>{group3}</div>
