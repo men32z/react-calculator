@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     const { calculation } = this.state;
     return (
-      <div>
+      <div className="calculator">
         <Display result={calculation} />
         <ButtonPanel />
       </div>
