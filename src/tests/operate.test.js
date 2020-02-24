@@ -16,6 +16,10 @@ test('return a division of two given numbers given the ÷ operator', () => {
   expect(operate('15', '15', '÷')).toBe('1');
 });
 
+test('return error message given a division by zero', () => {
+  expect(operate('15', '0', '÷')).toBe('Cannot divide by zero');
+});
+
 test('return a division of two given numbers given the % operator', () => {
   expect(operate('15', '15', '%')).toBe('0');
 });

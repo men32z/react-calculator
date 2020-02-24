@@ -10,8 +10,12 @@ const calculate = ({ total, next, operation }, buttonName) => {
   switch (buttonName) {
     case 'AC':
       return { total: '0', next: '0', operation: null };
-    case 'AC':
-      return { total, next: (next || 0).toString() + '.', operation};
+    case '.':
+      return {
+        total,
+        next: next.split('').includes('.') ? next : `${(next || 0).toString()}.`,
+        operation,
+      };
     case '+/-':
       return {
         total: (total * -1).toString(),

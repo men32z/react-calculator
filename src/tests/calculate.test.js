@@ -30,3 +30,13 @@ test('test calculate AC operator', () => {
   obj.operation = '+';
   expect(calculate(obj, 'AC')).toEqual({ total: '0', next: '0', operation: null });
 });
+
+test('test calculate . operator', () => {
+  obj.total = '15';
+  obj.next = '';
+  obj.operation = null;
+  expect(calculate(obj, '.')).toEqual({ total: '15', next: '0.', operation: null });
+  obj.next = '15';
+  expect(calculate(obj, '.')).toEqual({ total: '15', next: '15.', operation: null });
+  expect(calculate(obj, '.')).toEqual({ total: '15', next: '15.', operation: null });
+});

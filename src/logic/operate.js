@@ -4,7 +4,11 @@ import Big from 'big.js';
 const operate = (numberOne, numberTwo, operation) => {
   switch (operation) {
     case '÷':
-      return Big(numberOne).div(numberTwo).toString();
+      try {
+        return Big(numberOne).div(Big(numberTwo)).toString();
+      } catch (e) {
+        return e.message === '[big.js] Division by zero' ? 'Cannot divide by zero' : 'unknown error';
+      }
     case 'x':
       return Big(numberOne).times(numberTwo).toString();
     case '-':
