@@ -1,27 +1,30 @@
 import operate from './operate';
 
-const calculate = (calculator, buttonName) => {
-  const operators = ['÷', '+', '-', 'x'];
+const calculate = ({ total, next, operation }, buttonName) => {
+  const operators = ['÷', '+', '-', 'x', '%'];
+
+  if (operators.includes(buttonName)) {
+    return { total, next, operation: buttonName };
+  }
 
   switch (buttonName) {
     case 'AC':
-
-      break;
+      return { total: '0', next: '0', operation: null };
     case '+/-':
-
-      break;
-    case '%':
-
-      break;
+      return {
+        total: (total * -1).toString(),
+        next: (next * -1).toString(),
+        operation,
+      };
     case '=':
-
-      break;
+      return {
+        total: operate(total, next, operation),
+        next: '0',
+        operation: null,
+      };
     default:
-
+      return { total, next, operation };
   }
-  if (operators.includes(buttonName)) {
-    operate()
-  }
-}
+};
 
 export default calculate;

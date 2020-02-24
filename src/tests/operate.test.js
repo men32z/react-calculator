@@ -15,3 +15,7 @@ test('return a multiplication of two given numbers given the x operator', () => 
 test('return a division of two given numbers given the ÷ operator', () => {
   expect(operate('15', '15', '÷')).toBe('1');
 });
+
+test('return a division of two given numbers given the % operator', () => {
+  expect(operate('15', '15', '%')).toBe('0');
+});
