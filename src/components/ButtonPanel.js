@@ -3,8 +3,8 @@ import Button from './Button';
 
 const ButtonPanel = () => {
   const paintGray = i => (i < 3 ? '#E0E0E0' : undefined);
-  const group1 = ['AC', '+/-', '%', '+'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
-  const group2 = ['7', '8', '9', 'X'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
+  const group1 = ['AC', '+/-', '%', '÷'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
+  const group2 = ['7', '8', '9', 'x'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
   const group3 = ['4', '5', '6', '-'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
   const group4 = ['1', '2', '3', '+'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
   const group5 = ['0', '.', '='].map((x, i) => (
