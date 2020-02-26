@@ -35,14 +35,12 @@ class ButtonPanel extends React.Component {
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func,
-  result: PropTypes.objectOf(PropTypes.object()),
+  result: PropTypes.string,
 };
 
 ButtonPanel.defaultProps = {
   clickHandler: () => {},
-  result: {
-    next: '',
-  },
+  result: '',
 };
 
 export default ButtonPanel;

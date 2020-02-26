@@ -15,9 +15,9 @@ class Button extends React.Component {
   }
 
   isLocked(x) {
-    const { result: { next } } = this.props;
+    const { result } = this.props;
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-    return (next && next.match(/[a-z]/i) && !numbers.includes(x));
+    return (result && result.match(/[a-z]/i) && !numbers.includes(x));
   }
 
   render() {
@@ -45,7 +45,7 @@ Button.propTypes = {
   color: PropTypes.string,
   wide: PropTypes.bool,
   onClick: PropTypes.func,
-  result: PropTypes.objectOf(PropTypes.object()),
+  result: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -53,9 +53,7 @@ Button.defaultProps = {
   name: '',
   color: '#F5913E',
   onClick: () => {},
-  result: {
-    next: '',
-  },
+  result: '',
 };
 
 export default Button;

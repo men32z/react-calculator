@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div className="calculator">
         <Display result={next} />
-        <ButtonPanel clickHandler={this.handleClick} result={this.state} />
+        <ButtonPanel clickHandler={this.handleClick} result={next} />
       </div>
     );
   }
