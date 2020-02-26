@@ -1,25 +1,46 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => {
-  const paintGray = i => (i < 3 ? '#E0E0E0' : undefined);
-  const group1 = ['AC', '+/-', '%', '÷'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
-  const group2 = ['7', '8', '9', 'x'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
-  const group3 = ['4', '5', '6', '-'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
-  const group4 = ['1', '2', '3', '+'].map((x, i) => <Button key={x} name={x} color={paintGray(i)} />);
-  const group5 = ['0', '.', '='].map((x, i) => (
-    <Button key={x} name={x} color={i < 2 ? '#E0E0E0' : undefined} wide={i === 0} />
-  ));
+class ButtonPanel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-  return (
-    <div className="button-panel">
-      <div>{group1}</div>
-      <div>{group2}</div>
-      <div>{group3}</div>
-      <div>{group4}</div>
-      <div>{group5}</div>
-    </div>
-  );
+  handleClick(buttonName) {
+    const { clickHandler } = this.props;
+    return clickHandler(buttonName);
+  }
+
+  render() {
+    const { result } = this.props;
+    const paintGray = (i, x) => (i < 3 && x !== '=' ? '#E0E0E0' : undefined);
+    const items = [
+      ['AC', '+/-', '%', '÷'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '='],
+    ].map(x => (
+      <div key={x[0][0]}>
+        {x.map((x, i) => <Button key={x} name={x} result={result} onClick={this.handleClick} color={paintGray(i, x)} wide={x === '0'} />)}
+      </div>
+    ));
+
+    return (
+      <div className="button-panel">
+        {items}
+      </div>
+    );
+  }
+}
+
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+  result: PropTypes.string,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: () => {},
+  result: '',
 };
 
 export default ButtonPanel;

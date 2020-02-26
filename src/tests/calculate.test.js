@@ -7,21 +7,22 @@ const obj = {
 };
 
 test('test calculate add operator', () => {
-  obj.total = '15';
-  expect(calculate(obj, '+')).toEqual({ total: '15', next: '0', operation: '+' });
+  obj.next = '15';
+  expect(calculate(obj, '+')).toEqual({ total: '15', next: '', operation: '+' });
 });
 
 test('test calculate make a sum', () => {
-  obj.total = '15';
+  obj.total = '0';
+  obj.next = '15';
   const obj2 = calculate(obj, '+');
-  expect(obj2).toEqual({ total: '15', next: '0', operation: '+' });
+  expect(obj2).toEqual({ total: '15', next: '', operation: '+' });
   obj2.next = '15';
-  expect(calculate(obj2, '=')).toEqual({ total: '30', next: '0', operation: null });
+  expect(calculate(obj2, '=')).toEqual({ total: '0', next: '30', operation: null });
 });
 
 test('test calculate +/- operator', () => {
-  obj.total = '15';
-  expect(calculate(obj, '+/-')).toEqual({ total: '-15', next: '0', operation: null });
+  obj.next = '15';
+  expect(calculate(obj, '+/-')).toEqual({ total: '0', next: '-15', operation: null });
 });
 
 test('test calculate AC operator', () => {
