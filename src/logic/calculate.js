@@ -9,7 +9,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
   }
 
   if (numbers.includes(buttonName)) {
-    return { total, next: (next || '') + buttonName, operation };
+    return { total, next: ((next && next.match(/[a-z]/i) ? '' : next) || '') + buttonName, operation };
   }
 
   switch (buttonName) {

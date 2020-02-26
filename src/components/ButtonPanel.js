@@ -14,12 +14,13 @@ class ButtonPanel extends React.Component {
   }
 
   render() {
+    const { result } = this.props;
     const paintGray = (i, x) => (i < 3 && x !== '=' ? '#E0E0E0' : undefined);
     const items = [
       ['AC', '+/-', '%', '÷'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '='],
     ].map(x => (
       <div key={x[0][0]}>
-        {x.map((x, i) => <Button key={x} name={x} onClick={this.handleClick} color={paintGray(i, x)} wide={x === '0'} />)}
+        {x.map((x, i) => <Button key={x} name={x} result={result} onClick={this.handleClick} color={paintGray(i, x)} wide={x === '0'} />)}
       </div>
     ));
 
@@ -34,10 +35,14 @@ class ButtonPanel extends React.Component {
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func,
+  result: PropTypes.objectOf(PropTypes.object()),
 };
 
 ButtonPanel.defaultProps = {
   clickHandler: () => {},
+  result: {
+    next: '',
+  },
 };
 
 export default ButtonPanel;
