@@ -1,12 +1,12 @@
 # React Calculator
 
-![Screenshot](https://raw.githubusercontent.com/men32z/react-calculator/development/docs/aaaaaa.png)
+> This web calculator built with React and tested with Jest has all the basic functionality of a normal calculator. .
 
-## Project Specifications:
+ ![Screenshot](https://raw.githubusercontent.com/men32z/react-calculator/development/docs/aaaaaa.png)
 
 This project is a simple React application. 
-This web calculator built with React and tested with Jest has all the basic functionality of a normal calculator.
 You can find the original project specification at: [here](https://github.com/microverseinc/project-react-calculator)
+
 
 ## Live Version
 
@@ -28,10 +28,28 @@ npm start
 
 ## Built With:
 
-React, Javascript
+- React
+- Javascript
+- SCSS
 
 ## Author
-Luis Preza https://github.com/men32z
+
+👤 **Luis Preza**
+
+- Github: [@men32z](https://github.com/men32z)
+- Linkedin: [Luis Preza](https://www.linkedin.com/in/men32z/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/men32z/react-calculator/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -47,3 +65,10 @@ In the project directory, you can run:
 ### Deployment
 
 #### `npm run build` fails to minify
+
+
+
+
+### 📝 License
+
+MIT.
