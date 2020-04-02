@@ -1,9 +1,11 @@
-# Build a simple calculator with React
-# SOLO Project:
+# React Calculator
+
+![Screenshot](https://raw.githubusercontent.com/men32z/react-calculator/development/docs/aaaaaa.png)
+
 ## Project Specifications:
 
-This project is a simple React application. You will work in a real-world project for a fictional company that requires your help. The task is the development of a Calculator.
-
+This project is a simple React application. 
+This web calculator built with React and tested with Jest has all the basic functionality of a normal calculator.
 You can find the original project specification at: [here](https://github.com/microverseinc/project-react-calculator)
 
 ## Live Version
