@@ -5,7 +5,7 @@
  ![Screenshot](https://raw.githubusercontent.com/men32z/react-calculator/development/docs/aaaaaa.png)
 
 This project is a simple React application. 
-You can find the original project specification at: [here](https://github.com/microverseinc/project-react-calculator)
+You can find the original project specification: [here](https://github.com/microverseinc/project-react-calculator)
 
 
 ## Live Version
