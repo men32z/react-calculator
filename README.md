@@ -1,6 +1,6 @@
 # React Calculator
 
-> This web calculator built with React and tested with Jest has all the basic functionality of a normal calculator. .
+> This web calculator built with React and tested with Jest has all the basic functionalities of a normal calculator.
 
  ![Screenshot](https://raw.githubusercontent.com/men32z/react-calculator/development/docs/aaaaaa.png)
 
